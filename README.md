@@ -1,2 +1,3 @@
-# projeto-google-glass
-This is a project, to study html, css and js. Developed by cursoemvideo.com
+#google-glass-project
+This is a imaginary web-site, for CSS, HTML & JS trainning.
+
