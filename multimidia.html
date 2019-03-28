@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title> Estudo de HTML - Google glass  </title>
     <link rel="stylesheet" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/media.css">
 <script language="javascript" src="_javascript/funcoes.js"></script>
 
   </head>
@@ -17,7 +18,7 @@
       <h2>A revolução do Google está chegando</h2>
 
     </hgroup>
-      <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+      <img id="icone" src="_imagens/multimidia.png">
 <!-- Tag < pre > serve para mostrar o texto como se fosse pre formatado, entao tudo que esta
 dentro dessa tag, aparece no navegador da mesma forma.
 Tag <Code> serve para postar um codigo, que ja vai em fonte diferente, para ilustrar o codigo. -->
@@ -33,18 +34,27 @@ Tag <Code> serve para postar um codigo, que ja vai em fonte diferente, para ilus
 <!-- para a lista começar em alguma letra/numero que nao seja o primeiro (A ou 1) se utiliza o parametro Start="", sempre com numero -->
         </nav>
       </header>
+      <section id="corpo-full">
+        <article id="noticia-principal">
+          <header id="cab-art">
+            <hgroup>
+              <h3>Glass > Multimídia</h3>
+              <h1>Sons e Vídeos</h1>
+              <h2>por Carlos Henrique</h2>
+              <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+          </header>
 
-Glass > Multimídia
-Sons e Vídeos
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+          <div id="tv-radio">
+            <audio id="musica" controls="controls">
+              <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg">
+            </audio>
+            <video id="filme" controls="controls" controls poster="_imagens/video-mini03.jpg">
+              <source src="_media/getting-started.mp4" type="video/mp4">
+            </video>
+          </div>
 
-
-Áudio e Vídeo
-
-[AQUI ENTRA UM VÍDEO]
-[AQUI ENTRA UM ÁUDIO]
-
+        </article>
 <footer id="rodape">
 <a href="https://www.linkedin.com/in/carlosceagah/" target="_blank">Linkedin</a> | <a href="http://github.com/Ceagah" target="_blank">GitHub</a></p>
 <p>  Copyright &copy 2013 - by Carlos Henrique<br/>

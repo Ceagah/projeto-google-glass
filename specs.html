@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <title> Estudo de HTML - Google glass  </title>
     <link rel="stylesheet" href="_css/estilo.css"/>
-<script language="javascript" src="_javascript/funcoes.js"></script>
+    <link rel="stylesheet" href="_css/specs.css">
+    <script language="javascript" src="_javascript/funcoes.js"></script>
 
   </head>
   <body>
@@ -17,7 +18,7 @@
       <h2>A revolução do Google está chegando</h2>
 
     </hgroup>
-      <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+      <img id="icone" src="_imagens/especificacoes.png">
 <!-- Tag < pre > serve para mostrar o texto como se fosse pre formatado, entao tudo que esta
 dentro dessa tag, aparece no navegador da mesma forma.
 Tag <Code> serve para postar um codigo, que ja vai em fonte diferente, para ilustrar o codigo. -->
@@ -34,16 +35,31 @@ Tag <Code> serve para postar um codigo, que ja vai em fonte diferente, para ilus
         </nav>
       </header>
 
+<section id="corpo-full">
+  <article id="noticia-principal">
+    <header id="cab-art">
+      <hgroup>
+        <h3>Glass > Especificações</h3>
+        <h1>Raio-X no Google Glass</h1>
+        <h2>por Carlos Henrique</h2>
+        <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+      </hgroup>
+    </header>
 
-Glass > Especificações
-Raio-X no Google Glass
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+    <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
 
-Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
-
-[AQUI ENTRA UMA IMAGEM]
-
+    <section id="conteudo">
+      <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa">
+        <map name="meumapa">
+          <area shape="rect" coords="179,202,270,260" href="google-glass.html#tela" target="janela">
+          <area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela">
+          <area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" target="janela">
+          <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" target="janela">
+        </map>
+      <iframe src="google-glass.html" name="janela" id="frame-spec" scrolling="no"></iframe>
+    </section>
+  </article>
+</section>
 <footer id="rodape">
 <a href="https://www.linkedin.com/in/carlosceagah/" target="_blank">Linkedin</a> | <a href="http://github.com/Ceagah" target="_blank">GitHub</a></p>
 <p>  Copyright &copy 2013 - by Carlos Henrique<br/>
