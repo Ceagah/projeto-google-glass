@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title> Estudo de HTML - Google glass  </title>
     <link rel="stylesheet" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="/css/form.css">
 <script language="javascript" src="_javascript/funcoes.js"></script>
 
   </head>
@@ -33,38 +34,97 @@ Tag <Code> serve para postar um codigo, que ja vai em fonte diferente, para ilus
 <!-- para a lista começar em alguma letra/numero que nao seja o primeiro (A ou 1) se utiliza o parametro Start="", sempre com numero -->
         </nav>
       </header>
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+      <section id="corpo-full">
+      <article id="noticia-principal">
+        <header id="cab-art">
+          <hgroup>
+            <h3>Fale Conosco > Contato </h3>
+            <h1>Formulario de Contato</h1>
+            <h2>por Carlos Henrique</h2>
+            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+          </hgroup>
+        </header>
+          <form method="post" id="fcontato" action="mailto:contato@gglass.com.br">
+            <!-- get + rapido -seguro . Post +lento +seguro -->
+            <fieldset  id="user">
+               <!-- Cria um grupamento de campos.-->
+              <legend>Identificação do Usuário</legend>
+               <!-- Deixa o nome na borda do <fieldset> -->
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+              </fieldset>
+                  <p><label for="cnome">Nome</label>:<input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+                  <!-- Size = tamanho do text box . maxlength = numero de caracteres que o tb vai aceitar . placeholder é a dica que aparece dentro do tb-->
+                  <p><label for="csenha">Senha</label>:<input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 digitos"></p>
+                  <p><label for="cemail">E-mail</label>:<input type="email" name="temail" id="cemail"size="20" maxlength="40" placeholder="nome@dominio.com"></p>
+                  <fieldset id="sex"><legend>Sexo</legend>
+                      <input type="radio" name="tsexo" id="cmasc"> <label for="cmasc"> Masculino</label> <br>
+                      <!-- Para clicar no texto, e marcar a radio, usa-se o <label> -->
+                      <input type="radio" name="tsexo" id="cfem"> <label for="cfem"> Feminino</label>
+                      <!-- se quiser que um radio ja venha marcado, usa-se o parametro checked -->
+                  </fieldset>
+                  <p><input type="date" name="tdata" id="cdata" placeholder="DD/MM/AAAA"> Data de Nascimento</input>:</p>
+            </fieldset>
+            <fieldset id="end">
+                  <legend> Endereço do Usuário</legend>
+                  <p><label for="crua">Logradouro:<input type="text" name="trua" id="crua" placeholder="Rua/Av/Trav ..."></p>
+                  <p><label for="cnumero">Número:<input type="number" name="tnumero" id="cnumero" min="0" max="9999" placeholder=""></p>
+                  <p><label for="cest">Estado:<select name="test" id="cest">
+                    <option>Acre (AC) </option>
+                    <option>Alagoas (AL) </option>
+                    <option>Amapá (AM) </option>
+                    <option>Bahia (BA) </option>
+                    <option>Ceará (CE) </option>
+                    <option>Distrito Federal (DF) </option>
+                    <option>Espirito Santo (ES) </option>
+                    <option>Goiás (GO) </option>
+                    <option>Maranhão (MA) </option>
+                    <option>Mato Grosso (MT) </option>
+                    <option>Mato Grosso do Sul (MS) </option>
+                    <option>Minas Gerais (MG) </option>
+                    <option>Pará (PA) </option>
+                    <option>Paraíba (PB) </option>
+                    <option>Paraná (PR) </option>
+                    <option>Pernambuco (PE) </option>
+                    <option>Piauí (PI) </option>
+                    <option>Rio de Janeiro (RJ) </option>
+                    <option>Rio Grande do Norte (RN) </option>
+                    <option>Rio Grande do Sul (RS) </option>
+                    <option>Rondônia (RO) </option>
+                    <option>Roraima (RR) </option>
+                    <option>Santa Cataria (SC) </option>
+                    <option>São Paulo (SP) </option>
+                    <option>Sergipe (SE) </option>
+                    <option>Tocantins (TO) </option>
+                  </select></p>
+                  <p><label for="ccity">Cidade:<input type="text" name="tcity" id="ccity" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+                    <datalist id="cidades">
+                      <option value="São Paulo"> </option>
+                      <option value="Taubaté"></option>
+                      <option value="São José dos Campos"></option>
+                    </datalist>
+            </fieldset>
+            <fieldset id="msg">
+                  <legend> Mensagem do Usuário</legend>
+                  <p><label for ="curg">Grau de Urgência:</label>
+                    Min<input type="range" name="turg" id="curg" min="0" max="10" step="1">Máx
+                  </p>
+                  <p><label for ="cmsg">Mensagem:</label>
+                    <textarea name="tmsg" id="cmsg" cols="45" rows="5" placeholder="Deixe aqui a sua mensagem . . ."> 
+                    </textarea></p>
+            </fieldset>
+            <fieldset id="pedido">
+              <legend> Quero um Google Glass</legend>
+              <p> <label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+              <p> <label for="ccor">Cor:</label></p>
+              <p> <label for="cqtd">Quantidade:</label></p>
+            <p> <label for="ctot">Preço Total: R$</label></p>
+            </fieldset>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
-
-
-[BOTÃO ENVIAR]
+          [BOTÃO ENVIAR]
+        </form>
+        </article>
+</section>
 
 <footer id="rodape">
 <a href="https://www.linkedin.com/in/carlosceagah/" target="_blank">Linkedin</a> | <a href="http://github.com/Ceagah" target="_blank">GitHub</a></p>
