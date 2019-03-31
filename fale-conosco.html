@@ -5,8 +5,16 @@
     <meta charset="utf-8">
     <title> Estudo de HTML - Google glass  </title>
     <link rel="stylesheet" href="_css/estilo.css"/>
-    <link rel="stylesheet" href="/css/form.css">
-<script language="javascript" src="_javascript/funcoes.js"></script>
+    <link rel="stylesheet" href="_css/form.css">
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+      function calc_total() {
+        var qtd = parseInt(document.getElementById('cqtd').value)
+        tot = qtd * 1500,00
+        document.getElementById('ctot').value = tot;
+      }
+
+    </script>
 
   </head>
   <body>
@@ -44,26 +52,27 @@ Tag <Code> serve para postar um codigo, que ja vai em fonte diferente, para ilus
             <h3 class="direita">Atualizado em 01/Maio/2013</h3>
           </hgroup>
         </header>
-          <form method="post" id="fcontato" action="mailto:contato@gglass.com.br">
+          <form method="post" id="fcontato" action="mailto:contato@gglass.com.br" oninput="calc_total();">
             <!-- get + rapido -seguro . Post +lento +seguro -->
             <fieldset  id="user">
                <!-- Cria um grupamento de campos.-->
               <legend>Identificação do Usuário</legend>
                <!-- Deixa o nome na borda do <fieldset> -->
 
-              </fieldset>
+
                   <p><label for="cnome">Nome</label>:<input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"></p>
                   <!-- Size = tamanho do text box . maxlength = numero de caracteres que o tb vai aceitar . placeholder é a dica que aparece dentro do tb-->
                   <p><label for="csenha">Senha</label>:<input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 digitos"></p>
                   <p><label for="cemail">E-mail</label>:<input type="email" name="temail" id="cemail"size="20" maxlength="40" placeholder="nome@dominio.com"></p>
-                  <fieldset id="sex"><legend>Sexo</legend>
+                              <fieldset id="sex"><legend>Sexo</legend>
                       <input type="radio" name="tsexo" id="cmasc"> <label for="cmasc"> Masculino</label> <br>
                       <!-- Para clicar no texto, e marcar a radio, usa-se o <label> -->
                       <input type="radio" name="tsexo" id="cfem"> <label for="cfem"> Feminino</label>
                       <!-- se quiser que um radio ja venha marcado, usa-se o parametro checked -->
                   </fieldset>
-                  <p><input type="date" name="tdata" id="cdata" placeholder="DD/MM/AAAA"> Data de Nascimento</input>:</p>
-            </fieldset>
+                  <p><laber for="cdata"> Data de Nascimento</label><input type="date" name="tdata" id="cdata" placeholder="DD/MM/AAAA"> </input>:</p>
+                  </fieldset>
+
             <fieldset id="end">
                   <legend> Endereço do Usuário</legend>
                   <p><label for="crua">Logradouro:<input type="text" name="trua" id="crua" placeholder="Rua/Av/Trav ..."></p>
@@ -109,19 +118,22 @@ Tag <Code> serve para postar um codigo, que ja vai em fonte diferente, para ilus
                     Min<input type="range" name="turg" id="curg" min="0" max="10" step="1">Máx
                   </p>
                   <p><label for ="cmsg">Mensagem:</label>
-                    <textarea name="tmsg" id="cmsg" cols="45" rows="5" placeholder="Deixe aqui a sua mensagem . . ."> 
+                    <textarea name="tmsg" id="cmsg" cols="35" rows="5" placeholder="Deixe aqui a sua mensagem . . .">
                     </textarea></p>
             </fieldset>
+
             <fieldset id="pedido">
               <legend> Quero um Google Glass</legend>
-              <p> <label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
-              <p> <label for="ccor">Cor:</label></p>
-              <p> <label for="cqtd">Quantidade:</label></p>
-            <p> <label for="ctot">Preço Total: R$</label></p>
+              <p> <input type="checkbox" name="tped" id="cped" checked>
+              <label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+              <p> <label for="ccor">Cor:</label> <input type="color" name="ccor"> </p>
+              <p> <label for="cqtd">Quantidade:</label>
+              <input type="number" name="tnumero" id="cqtd" min="0" max="5" value="0"></p>
+            <p> <label for="ctot">Preço Total: R$</label> <input type="text" name="ttot" id="ctot" placeholder=" Total a pagar" readonly> </p>
             </fieldset>
 
+          <input type="image" src="_imagens/botao-enviar.png">
 
-          [BOTÃO ENVIAR]
         </form>
         </article>
 </section>
